@@ -1,0 +1,12 @@
+@mixin style ($pxl : 0px){
+    margin-left : pxl;
+    margin-right : pxl
+}
+
+body {
+    @include style($pxl : 10px)
+}
+
+div{
+    @include style($pxl : 15px)
+}
