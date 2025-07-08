@@ -1,0 +1,40 @@
+✅ 1. Make sure Node.js and npm are installed
+SASS can be installed via npm, so you need Node.js and npm:
+Open terminal/command prompt.
+Run:
+node -v
+npm -v
+If not installed, download and install Node.js.
+
+✅ 2. Initialize your project (if not already done)
+If you're in a new project folder:
+npm init -y
+This creates a package.json file.
+
+✅ 3. Install SASS
+Use npm to install the SASS compiler:
+npm install -D sass
+The -D flag means "development dependency" (optional, but good practice for tools like SASS).
+
+✅ 4. Create your SCSS/SASS files
+Example:
+styles.scss
+
+✅ 5. Add a build script (optional but recommended)
+Edit your package.json and add a script:
+"scripts": {
+  "sass": "sass styles.scss styles.css"
+}
+To run it:
+npm run sass
+
+✅ 6. Watch for changes (optional for development)
+Instead of compiling manually every time:
+npx sass --watch styles.scss:styles.css
+Or update the script:
+"scripts": {
+  "sass": "sass --watch styles.scss:styles.css"
+}
+
+✅ 7. Link the CSS file in your HTML
+<link rel="stylesheet" href="styles.css">
